@@ -21,13 +21,13 @@ function evaluation(num, output) {
 }
 
 
-//  Typing button number on screen
-const btns = Array.from(document.querySelectorAll('.btn'));
+const btns = (document.querySelectorAll('.btn'));
 btns.forEach(btn => {
     btn.addEventListener('click', e => {
         operation.textContent += e.target.textContent;
     }) 
 })
+
 
 //  EVALUATION BTN
 const operation = document.querySelector('.operation');
@@ -70,5 +70,6 @@ document.querySelector('.ans-btn')
 //     val1 = (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
 //     val2 = (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
 
-//     return a + ' and ' + b;
+//     return val1 + ' and ' + val2;
 // }
+// console.log(quadratic(2, -4, -2));
